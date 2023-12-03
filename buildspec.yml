@@ -4,7 +4,7 @@ phases:
   install:
     commands:
       - echo "Installing Node.js"
-      - nvm install <node_version>  # Replace <node_version> with the desired Node.js version
+      - nvm install 18.15.0  # Replace <node_version> with the desired Node.js version
       - echo "Installing Yarn"
       - npm install -g yarn
 

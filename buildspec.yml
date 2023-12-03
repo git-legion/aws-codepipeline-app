@@ -1,0 +1,23 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Installing Node.js"
+      - nvm install <node_version>  # Replace <node_version> with the desired Node.js version
+      - echo "Installing Yarn"
+      - npm install -g yarn
+
+  pre_build:
+    commands:
+      - echo "Installing project dependencies"
+      - yarn install
+
+  build:
+    commands:
+      - echo "Building React App"
+      - npm run build
+
+artifacts:
+  files: '**/*'
+  base-directory: 'build'
